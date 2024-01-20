@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<section class="text-center">
+    <div class="container-fluid mt-3">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3 text-bg-danger p-2"></div>
+                <div class="col-6  p-3">
+                    <h1 class="display-2"><h1>Guest Order</h1>
+
+                        <form method="post" th:object="${orderDto}" th:action="@{/guest/order}">
+                            <label>Your name: </label><input type="text" th:field="*{guest}"><br>
+                            <label>Burger: </label>
+                            <select th:field="*{burgerId}">
+                                <option th:each="burger : ${burgers}" th:value="${burger.getId()}" th:text="${burger.getName()}"></option>
+                            </select><br>
+                            <button type="submit">Submit</button>
+
+                        </form></strong></h1>
+                </div>
+                <div class="col-3 text-bg-danger p-2"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mt">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col text-bg-danger p-2">
+                    <H1><strong>Cheese Burger</strong></H1>
+                    <img src="https://www.athensvoice.gr/images/708x900/3/jpg/files/2022-11-10/tsaki_tsan__1_.jpg"
+                         width="250" height="300" alt="">
+                </div>
+                <div class="col p-3">
+                    <H1><strong>Burger</strong></H1>
+                    <img src="https://www.lifo.gr/sites/default/files/styles/max_1920x1920/public/articles/2023-03-16/%CE%BC%CF%80%CE%B1%CF%81%CE%BC%CF%80%CE%B5%CE%B5%CE%BA%CE%B9%CE%BF%CF%85%20%281%29.jpg?itok=3JrfV3vG"
+                         width="250" height="300" alt="">
+                </div>
+                <div class="col text-bg-danger p-2">
+                    <H1><strong>Bacon Burger</strong></H1>
+                    <img src="https://www.lifo.gr/sites/default/files/styles/max_1920x1920/public/articles/2023-03-16/%CE%BC%CF%80%CE%B1%CF%81%CE%BC%CF%80%CE%B5%CE%B5%CE%BA%CE%B9%CE%BF%CF%85%20%282%29.jpg?itok=GAZ7tZa-"
+                         width="250" height="300" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+</body>
+</html>

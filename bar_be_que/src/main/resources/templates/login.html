@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<section class="text-center">
+    <div class="container-fluid mt-3">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col text-bg-danger p-2">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShJlFgCO26uO6GQZHwl7ou5KbkW2wXpKoTAHvtwXn2GiT_h706XsL1_bkV2mtLV-FXTCc&usqp=CAU"
+                         width="300" height="350" alt="">
+                </div>
+                <div class="col  p-3">
+                    <h1>Login</h1>
+                    <pre>
+
+
+                    </pre>
+                    <form method="post" th:action="@{/login}">
+                        <label>Username: </label><input type="text" name="username" id="username" /><br>
+                        <pre>
+
+
+                        </pre>
+                        <label>Password: </label><input type="password" name="password" id="password" /><br>
+                        <pre>
+
+                        </pre>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <div class="col text-bg-danger p-2">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShJlFgCO26uO6GQZHwl7ou5KbkW2wXpKoTAHvtwXn2GiT_h706XsL1_bkV2mtLV-FXTCc&usqp=CAU"
+                         width="300" height="350" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+</body>
+</html>
